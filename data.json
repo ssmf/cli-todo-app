@@ -1,6 +1,14 @@
 [
  {
-  "Name": "Cycle",
+  "Name": "Read",
+  "Done": false
+ },
+ {
+  "Name": "Go for a walk",
+  "Done": true
+ },
+ {
+  "Name": "Write some go",
   "Done": true
  }
 ]

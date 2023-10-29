@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"flag"
-	"fmt"
 	"os"
 
 	"example.com/packages/todo"
@@ -36,9 +35,7 @@ func main() {
 	if *TaskDone && !*RemoveTask && !*AddTask {
 		for i, v := range MainTaskList {
 			if v.Name == *TaskName {
-				fmt.Println(MainTaskList)
 				MainTaskList[i].DoTask()
-				fmt.Println(MainTaskList)
 			}
 		}
 	}
