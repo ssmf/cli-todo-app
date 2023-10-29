@@ -22,5 +22,21 @@
  {
   "Name": "-taskdone",
   "Done": false
+ },
+ {
+  "Name": "Read",
+  "Done": true
+ },
+ {
+  "Name": "Cycle",
+  "Done": true
+ },
+ {
+  "Name": "Cycle",
+  "Done": false
+ },
+ {
+  "Name": "go",
+  "Done": true
  }
 ]
