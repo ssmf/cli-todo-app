@@ -21,12 +21,20 @@ func (l *TaskList) WriteJson() {
 func (l *TaskList) AddTask(t string, d bool) {
 
 	*l = append(*l, Task{t, d})
-	l.WriteJson()
 
 }
 
-func (l *TaskList) RemoveTask(i int) {
+func (l *TaskList) RemoveTask(name string) {
+	var indx int = -1
+	for i, v := range *l {
+		if v.Name == name {
+			indx = i
+		}
+	}
 
+	if indx != -1 {
+		*l = append((*l)[:indx], (*l)[indx+1:]...)
+	}
 }
 
 func (t *Task) DoTask() {

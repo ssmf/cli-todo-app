@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"flag"
+	"fmt"
 	"os"
 
 	"example.com/packages/todo"
@@ -16,7 +17,7 @@ func main() {
 	json.Unmarshal(DataFile, &MainTaskList)
 
 	AddTask := flag.Bool("add", false, "Specifies if user wants to add a new task")
-	RemoveTask := flag.Bool("remove", false, "Specifies if user wants to remove an existing task")
+	RemoveTask := flag.Bool("rm", false, "Specifies if user wants to remove an existing task")
 	TaskName := flag.String("name", "BoilerplateTask", "Define a task name")
 	TaskDone := flag.Bool("done", false, "Define if task is done")
 	ShowList := flag.Bool("list", false, "Show current list of todos")
@@ -28,8 +29,18 @@ func main() {
 	} else if *AddTask {
 		MainTaskList.AddTask(*TaskName, *TaskDone)
 	} else if *RemoveTask {
-		// MainTaskList
+		MainTaskList.RemoveTask(*TaskName)
 	}
 	MainTaskList.DisplayList(*ShowList)
 
+	if *TaskDone && !*RemoveTask && !*AddTask {
+		for i, v := range MainTaskList {
+			if v.Name == *TaskName {
+				fmt.Println(MainTaskList)
+				MainTaskList[i].DoTask()
+				fmt.Println(MainTaskList)
+			}
+		}
+	}
+	MainTaskList.WriteJson()
 }
