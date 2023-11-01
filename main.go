@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"flag"
-	"fmt"
 	"os"
 
 	"example.com/packages/todo"
@@ -26,7 +25,6 @@ func main() {
 	flag.Parse()
 
 	if *Help && !*AddTask && !*RemoveTask && !*ShowList && !*TaskDone {
-		fmt.Println("it works!")
 		todo.DisplayHelp()
 	}
 
