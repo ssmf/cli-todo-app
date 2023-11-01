@@ -1,4 +1,4 @@
-module example.com/packages
+module github.com/ssmf/cli-todo-app
 
 go 1.21.3
 

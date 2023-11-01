@@ -5,7 +5,7 @@ import (
 	"flag"
 	"os"
 
-	"example.com/packages/todo"
+	"github.com/ssmf/cli-todo-app/todo"
 )
 
 func main() {
