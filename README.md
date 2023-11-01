@@ -8,8 +8,10 @@ In order to install this program, you need to have golang installed, you can get
 
 To install all the files, in our cli type:
 ```
-go get github.com/ssmf/cli-todo-app
+git clone git@github.com:ssmf/cli-todo-app.git
 ```
+
+Alternatively, you may just download the zip file
 
 Please note that the exe file must be in **the same directory** as the data.json file
 
@@ -27,7 +29,7 @@ The program works primarly on using flags, passing in either none or 1 argument.
 
 The flag works by itself (meaning, not parsing any value) if the value we want to define is bool (e.g.. if the task is done), We pass in a value if The value is not bool and we want to specify it (e.g. -name [value])
 
-here is a list of all flags available:
+Here is a list of all flags available:
 
 - -add -> Specifies if user wants to add a new task
 - -rm -> Specifies if user wants to remove an existing task
@@ -38,7 +40,7 @@ here is a list of all flags available:
 
 *(note that you can also get this list by parsing the -help flag)*
 
-here are examples of using the flags:
+Here are examples of using the flags:
 ```
 ./main.exe -help
 ./main.exe -add -name "Read a book"
