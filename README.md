@@ -7,7 +7,7 @@ In order to install this program, you need to have golang installed, you can get
 [here](https://go.dev/doc/install)
 
 To install all the files, in our cli type:
-```console
+```
 go get github.com/ssmf/cli-todo-app
 ```
 
@@ -19,7 +19,7 @@ Please note that the exe file must be in **the same directory** as the data.json
 
 # Usage
 In order to use the program, we just type the name of it in our cli and pass a flag to it:
-```console
+```
 ./main.exe -help
 ```
 
@@ -39,7 +39,7 @@ here is a list of all flags available:
 *(note that you can also get this list by parsing the -help flag)*
 
 here are examples of using the flags:
-```console
+```
 ./main.exe -help
 ./main.exe -add -name "Read a book"
 ./main.exe -rm -name "Read a book"
